@@ -17,6 +17,15 @@
          int w2 = int.Parse(Console.ReadLine());
          Console.Write("ความสูงของประกาศฉบับที่ 2 : ");
          int h2 = int.Parse(Console.ReadLine());
+
+         int TopRight1 = x1 + w1 + h1;
+         int TopLeft1 = x1 -w1 + h1;
+         int BotRight1 = x1 + w1 - h1;
+         int BotLeft1 = x1 - w1 - h1;
+         int TopRight2 = x2 + w2 + h2;
+         int TopLeft2 = x2 -w2 + h2;
+         int BotRight2 = x2 + w2 - h2;
+         int BotLeft2 = x2 - w2 - h2;
  
 Console.WriteLine("จงมีความสุขกาย สุขใจ รักษาตนให้พ้นจากทุกข์ภัยทั้งสิ้นเถิด");
 
