@@ -38,15 +38,21 @@
 
         if ((BotRightx1 >= TopLeftx2 && BotRightx1 <= TopRightx2 ) || (BotLeftx1 >= TopRightx2 && BotLeftx1 <= TopLeftx1) ) {
             if((BotRighty1 >= TopLefty2 && BotRighty1 <= TopRighty2 ) || (BotLefty1 >= TopRighty2 && BotLefty1 <= TopLefty1)) {
-Console.WriteLine("Overlaping");
-            } 
-        } Console.WriteLine("Not Overlaping");
+                double Area1=(BotRightx1-TopLeftx2)*(BotRighty1-TopLefty2);
+                double Area2=(BotLeftx1-TopRightx2)*(BotLefty1-TopRighty2);
+                if(Area1 > 8) {Console.WriteLine("Too Much Overlaping");} else if(Area2 > 8) {Console.WriteLine("Too Much Overlaping");} else {Console.WriteLine("Not Too Much Overlaping");}
+                
+            } else Console.WriteLine("Not Overlaping");
+        } 
 
-        if ((BotRightx1 >= TopLeftx2 && BotRightx1 <= TopRightx2 ) || (BotLeftx1 >= TopRightx2 && BotLeftx1 <= TopLeftx1) ) {
-            if((BotRighty1 >= TopLefty2 && BotRighty1 <= TopRighty2 ) || (BotLefty1 >= TopRighty2 && BotLefty1 <= TopLefty1)) {
-Console.WriteLine("Overlaping");
-            } 
-        } Console.WriteLine("Not Overlaping");
+        if ((TopRightx1 >= BotLeftx2 && TopRightx1 <= BotRightx2 ) || (TopLeftx1 >= BotRightx2 && TopLeftx1 <= BotLeftx1) ) {
+            if((TopRighty1 >= BotLefty2 && TopRighty1 <= BotRighty2 ) || (TopLefty1 >= BotRighty2 && TopLefty1 <= BotLefty1)) {
+                double Area1=(TopLeftx2-BotRightx1)*(TopRighty2-BotRighty1);
+                double Area2=(TopRightx2-BotLeftx1)*(TopLefty2-BotRightx1);
+                if(Area1 > 8 || Area1 < 8) {Console.WriteLine("Too Much Overlaping");} else if(Area2 > 8 || Area2 < 8) {Console.WriteLine("Too Much Overlaping");} else {Console.WriteLine("Not Too Much Overlaping");}
+
+            } else Console.WriteLine("Not Overlaping");
+        } 
 
     }
 }
